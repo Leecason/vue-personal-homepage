@@ -1,0 +1,30 @@
+.overview {
+  display: flex;
+  background-color: $white-color;
+  border-radius: .4rem;
+  min-height: 10rem;
+  overflow: hidden;
+
+  .symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    color: $white-color;
+    font-size: 4.5rem;
+  }
+  .value {
+    color: $gray-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+
+    .count {
+      font-size: 2.4rem;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}

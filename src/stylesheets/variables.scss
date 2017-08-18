@@ -1,0 +1,47 @@
+// color
+$primary-color: #20A0FF;
+$success-color: #13CE66;
+$warning-color: #F7BA2A;
+$danger-color: #FF4949;
+$white-color: #fff;
+$black-color: #313131;
+$darken-gray-color: #616161;
+$gray-color: #757575;
+$light-gray-color: #9e9e9e;
+$helper-color: #bababa;
+$gray-bg-color: #f3f3f3;
+$light-gray-bg-color: #f6f6f6;
+$darken-gray-bg-color: #eee;
+
+$sidebar-width: 20rem;
+
+.primary {
+  background-color: $primary-color!important;
+}
+.success {
+  background-color: $success-color!important;
+}
+.warning {
+  background-color: $warning-color!important;
+}
+.danger {
+  background-color: $danger-color!important;
+}
+html {
+  font-size: 10px;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}

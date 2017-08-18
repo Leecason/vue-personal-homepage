@@ -1,19 +1,29 @@
 <template>
-  <el-row :gutter="10">
-    <el-col :span="6" v-for="card in cards" :key="card.name">
-      <div class="grid-content bg-purple">
-        <basic-card :icon="card.icon" :count="card.count" :type="card.type" :name="card.name"></basic-card>
-      </div>
-    </el-col>
-  </el-row>
+  <div class="dashboard">
+    <el-row :gutter="10">
+      <el-col :span="6" v-for="card in cards" :key="card.name">
+        <div class="grid-content bg-purple">
+          <status-card :icon="card.icon" :count="card.count" :type="card.type" :name="card.name"></status-card>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="10">
+      <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="8">
+        <user-panel :user="user"></user-panel>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script type="javascript">
-  import basicCard from './basic_card.vue';
+  import statusCard from './status_card.vue';
+  import userPanel from './user_panel.vue';
   export default {
     name: 'Dashboard',
     components: {
-      'basic-card': basicCard
+      'status-card': statusCard,
+      'user-panel': userPanel
     },
     data () {
       return {
@@ -42,7 +52,28 @@
             type: 'danger',
             name: 'Donwloads'
           }
-        ]
+        ],
+        user: {
+          name: 'Cason Lee',
+          role: 'Administrator',
+          infos: [
+            {
+              icon: 'user',
+              role: 'Sex',
+              value: 'Male'
+            },
+            {
+              icon: 'envelope',
+              role: 'Email',
+              value: 'leecason0722@gmail.com'
+            },
+            {
+              icon: 'location-arrow',
+              role: 'Localtion',
+              value: 'Chengdu, China'
+            }
+          ]
+        }
       }
     }
   }

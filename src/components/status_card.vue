@@ -1,5 +1,5 @@
 <template>
-  <div class="overview">
+  <div class="lee-status-card">
     <div class="symbol" :class="[type]">
       <i :class="'fa fa-' + icon"></i>
     </div>
@@ -12,7 +12,7 @@
 
 <script type="javascript">
   export default {
-    name: 'basicCard',
+    name: 'statusCard',
     props: ['icon', 'type', 'name', 'count']
   }
 </script>

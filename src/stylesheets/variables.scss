@@ -27,6 +27,30 @@ $sidebar-width: 20rem;
 .danger {
   background-color: $danger-color!important;
 }
+
+.primary-text {
+  color: $primary-color!important;
+}
+.success-text {
+  color: $success-color!important;
+}
+.warning-text {
+  color: $warning-color!important;
+}
+.danger-text {
+  color: $danger-color!important;
+}
+
+.large-text {
+  font-size: 1.8rem!important;
+}
+.normal-text {
+  font-size: 1.4rem!important;
+}
+.small-text {
+  font-size: 1.2rem!important;
+}
+
 html {
   font-size: 10px;
 }
@@ -50,4 +74,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.justify-vertical {
+  display: flex;
+  flex-direction: column;
 }

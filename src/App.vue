@@ -19,6 +19,7 @@
     </div>
     <div class="main-content">
       <router-view></router-view>
+      <footer class="content-footer">Author : <a class="primary-text" href="https://github.com/Leecason" target="_blank">Leecason</a></footer>
     </div>
   </div>
 </template>

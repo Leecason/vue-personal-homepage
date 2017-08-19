@@ -21,7 +21,7 @@
       </el-col>
       <el-col :sm="24" :md="8">
         <div class="lee-panel">
-          <div class="heading">
+          <div class="heading warning-text">
             Cost
           </div>
           <div class="content">

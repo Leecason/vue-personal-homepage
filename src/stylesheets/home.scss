@@ -44,6 +44,13 @@
     padding: 1rem;
     background-color: $gray-bg-color;
     overflow: auto;
+
+    .content-footer {
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: $light-gray-color;
+    }
   }
 }
 
@@ -80,6 +87,10 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

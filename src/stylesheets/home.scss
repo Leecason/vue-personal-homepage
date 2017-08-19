@@ -45,3 +45,21 @@
     background-color: $gray-bg-color;
   }
 }
+
+// list
+.list {
+  .list-item {
+    display: flex;
+    align-items: center;
+    min-height: 3.5rem;
+    padding: .5rem;
+    background-color: $white-color;
+    border-bottom: 2px solid $gray-bg-color;
+    font-size: 1.2rem;
+    color: $gray-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.lee-overview {
+  .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .name {
+      color: $primary-color;
+      font-size: 2rem;
+    }
+    .role {
+      color: $gray-color;
+      font-size: 1.2rem;
+    }
+  }
+
+  .list {
+    .list-item {
+      border-left: 2px solid $success-color;
+    }
+  }
+}

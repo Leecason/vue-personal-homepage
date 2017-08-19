@@ -1,16 +1,18 @@
 <template>
   <div class="dashboard">
     <el-row :gutter="10">
-      <el-col :span="6" v-for="card in cards" :key="card.name">
+      <el-col :span="6" v-for="card in cardsData" :key="card.name">
         <div class="grid-content bg-purple">
-          <status-card :icon="card.icon" :count="card.count" :type="card.type" :name="card.name"></status-card>
+          <lee-status-card :icon="card.icon" :count="card.count" :type="card.type" :name="card.name"></lee-status-card>
         </div>
       </el-col>
     </el-row>
     <el-row :gutter="10">
-      <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="16">
+        <lee-progress title="Skills" :progressData="progressData"></lee-progress>
+      </el-col>
       <el-col :span="8">
-        <user-panel :user="user"></user-panel>
+        <lee-user-overview :user="user" :profile="profileData"></lee-user-overview>
       </el-col>
     </el-row>
   </div>
@@ -18,16 +20,23 @@
 
 <script type="javascript">
   import statusCard from './status_card.vue';
-  import userPanel from './user_panel.vue';
+  import Overview from './user_overview.vue';
+  import Progress from './Progress.vue';
   export default {
     name: 'Dashboard',
     components: {
-      'status-card': statusCard,
-      'user-panel': userPanel
+      'lee-status-card': statusCard,
+      'lee-user-overview': Overview,
+      'lee-progress': Progress
     },
     data () {
       return {
-        cards: [
+        user: {
+          photo: require('@/assets/user_photo.jpeg'),
+          name: 'Cason Lee',
+          role: 'Administrator'
+        },
+        cardsData: [
           {
             icon: 'user',
             count: '996',
@@ -53,27 +62,50 @@
             name: 'Donwloads'
           }
         ],
-        user: {
-          name: 'Cason Lee',
-          role: 'Administrator',
-          infos: [
-            {
-              icon: 'user',
-              role: 'Sex',
-              value: 'Male'
-            },
-            {
-              icon: 'envelope',
-              role: 'Email',
-              value: 'leecason0722@gmail.com'
-            },
-            {
-              icon: 'location-arrow',
-              role: 'Localtion',
-              value: 'Chengdu, China'
-            }
-          ]
-        }
+        profileData: [
+          {
+            icon: 'fa fa-user',
+            key: 'Sex',
+            value: 'Male'
+          },
+          {
+            icon: 'fa fa-envelope',
+            key: 'Email',
+            value: 'leecason0722@gmail.com'
+          },
+          {
+            icon: 'fa fa-location-arrow',
+            key: 'Localtion',
+            value: 'Chengdu, China'
+          }
+        ],
+        progressData: [
+          {
+            name: 'Javascript',
+            tags: ['Vue', 'React', 'Angular'],
+            value: 80
+          },
+          {
+            name: 'Css',
+            tags: ['Sass', 'Less'],
+            value: 60
+          },
+          {
+            name: 'Html',
+            tags: [],
+            value: 30
+          },
+          {
+            name: 'Office',
+            tags: ['Excel', 'PPT', 'Word'],
+            value: 100
+          },
+          {
+            name: 'Other',
+            tags: ['PhotoShop'],
+            value: 45
+          }
+        ]
       }
     }
   }

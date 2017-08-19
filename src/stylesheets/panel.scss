@@ -1,0 +1,12 @@
+.lee-panel {
+  border-radius: 4px;
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.4rem;
+    background: $white-color;
+    border-bottom: 2px solid $gray-bg-color;
+  }
+}

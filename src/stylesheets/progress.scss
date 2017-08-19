@@ -1,0 +1,22 @@
+.lee-progress {
+  .heading {
+    color: $success-color;
+    font-size: 1.8rem;
+  }
+  .progress-content {
+    .progress {
+      flex: 3;
+    }
+    .tags {
+      flex: 2;
+      text-align: right;
+
+      .tag {
+        margin: 0 .4rem;
+      }
+    }
+    .name {
+      flex: 1;
+    }
+  }
+}

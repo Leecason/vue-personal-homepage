@@ -15,19 +15,29 @@
         <lee-user-overview :user="user" :profile="profileData"></lee-user-overview>
       </el-col>
     </el-row>
+    <el-row :gutter="10">
+      <el-col :span="16">
+        <lee-step title="Steps For What To Do Today" :stepData="stepData"></lee-step>
+      </el-col>
+      <el-col :span="8">
+        <ve-pie :data="chartData" :settings="pieSettings"></ve-pie>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script type="javascript">
   import statusCard from './status_card.vue';
   import Overview from './user_overview.vue';
-  import Progress from './Progress.vue';
+  import Progress from './progress.vue';
+  import Step from './step.vue';
   export default {
     name: 'Dashboard',
     components: {
       'lee-status-card': statusCard,
       'lee-user-overview': Overview,
-      'lee-progress': Progress
+      'lee-progress': Progress,
+      'lee-step': Step
     },
     data () {
       return {
@@ -104,6 +114,38 @@
             name: 'Other',
             tags: ['PhotoShop'],
             value: 45
+          }
+        ],
+        stepData: [
+          {
+            title: 'What to do in the morning?',
+            description: '7.30 AM get up, after braekfast go out running',
+            icon: 'fa fa-sun-o'
+          },
+          {
+            title: 'What to eat for lunch?',
+            description: 'A simple meal, a thick soup and an apple',
+            icon: 'fa fa-cutlery'
+          },
+          {
+            title: 'What plan in the afternoon?',
+            description: 'Coding, Coding, Coding...',
+            icon: 'fa fa-github'
+          },
+          {
+            title: 'How to relax today?',
+            description: 'Coding, Coding, Coding, Coding, Coding, Coding, Coding, Coding, Coding, Coding, Coding, Coding...',
+            icon: 'fa fa-github'
+          },
+          {
+            title: 'How to play with friends in the evening?',
+            description: 'Coding, Coding, Coding...',
+            icon: 'fa fa-gamepad'
+          },
+          {
+            title: 'When to sleep?',
+            description: 'Sleep? Impossible',
+            icon: 'fa fa-bed'
           }
         ]
       }

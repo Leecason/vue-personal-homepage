@@ -1,0 +1,15 @@
+.lee-step {
+  .heading {
+    font-size: 2rem;
+    color: $success-color;
+
+    .title {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+  .content {
+    padding: 2rem;
+    text-align: left;
+  }
+}

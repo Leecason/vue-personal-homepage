@@ -1,25 +1,25 @@
 <template>
   <div class="dashboard">
-    <el-row :gutter="10">
-      <el-col :span="6" v-for="card in cardsData" :key="card.id">
+    <el-row :gutter="10" class="status-card-container">
+      <el-col :sm="24" :md="6" v-for="card in cardsData" :key="card.id">
         <div class="grid-content bg-purple">
           <lee-status-card :icon="card.icon" :count="card.count" :type="card.type" :name="card.name"></lee-status-card>
         </div>
       </el-col>
     </el-row>
     <el-row :gutter="10">
-      <el-col :span="16">
+      <el-col :sm="24" :md="16" class="progress-container">
         <lee-progress title="Skills" :progressData="progressData"></lee-progress>
       </el-col>
-      <el-col :span="8">
+      <el-col :sm="24" :md="8" class="overview-container">
         <lee-user-overview :user="user" :profile="profileData"></lee-user-overview>
       </el-col>
     </el-row>
     <el-row :gutter="10">
-      <el-col :span="16">
+      <el-col :sm="24" :md="16">
         <lee-step title="Steps For What To Do Today" :stepData="stepData"></lee-step>
       </el-col>
-      <el-col :span="8">
+      <el-col :sm="24" :md="8">
         <div class="lee-panel">
           <div class="heading">
             Cost

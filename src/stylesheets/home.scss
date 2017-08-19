@@ -43,6 +43,7 @@
     flex-grow: 1;
     padding: 1rem;
     background-color: $gray-bg-color;
+    overflow: auto;
   }
 }
 
@@ -60,6 +61,25 @@
 
     &:last-child {
       border-bottom: none;
+    }
+  }
+}
+
+.dashboard {
+  .el-row {
+    margin-bottom: 1rem;
+
+    >.el-col {
+      margin-bottom: 1rem;
+
+      .ve-pie {
+        > div {
+          margin: 0 auto;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

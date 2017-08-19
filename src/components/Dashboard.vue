@@ -52,7 +52,7 @@
     data () {
       return {
         user: {
-          photo: require('@/assets/user_photo.jpeg'),
+          photo: require('@/assets/img/user_photo.jpeg'),
           name: 'Cason Lee',
           role: 'Administrator'
         },

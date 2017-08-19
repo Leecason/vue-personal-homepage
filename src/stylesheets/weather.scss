@@ -1,0 +1,33 @@
+.lee-weather {
+  margin-top: 2rem;
+
+  .heading {
+    align-items: center;
+    justify-content: space-around;
+    color: $white-color;
+
+    i {
+      font-size: 5rem;
+    }
+    .location {
+      font-size: 1.2rem;
+      color: $light-gray-bg-color;
+    }
+    .temperature {
+      font-size: 5rem;
+    }
+  }
+  .content {
+    > * {
+      margin: 0;
+    }
+    .grid-content {
+      color: $gray-color;
+      font-size: 1.8rem;
+
+      .value {
+        font-weight: 300;
+      }
+    }
+  }
+}

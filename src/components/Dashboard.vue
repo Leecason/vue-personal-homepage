@@ -39,13 +39,15 @@
   import Overview from './user_overview.vue';
   import Progress from './progress.vue';
   import Step from './step.vue';
+  import Weather from './weather.vue';
   export default {
     name: 'Dashboard',
     components: {
       'lee-status-card': statusCard,
       'lee-user-overview': Overview,
       'lee-progress': Progress,
-      'lee-step': Step
+      'lee-step': Step,
+      'lee-weather': Weather
     },
     data () {
       return {
@@ -175,7 +177,14 @@
             description: 'Sleep? Impossible',
             icon: 'fa fa-bed'
           }
-        ]
+        ],
+        weatherData: {
+          location: 'Chengdu',
+          temperature: '30°',
+          API: 43,
+          humidity: '84%',
+          winds: '10mph'
+        }
       }
     }
   }

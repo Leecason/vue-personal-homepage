@@ -20,7 +20,15 @@
         <lee-step title="Steps For What To Do Today" :stepData="stepData"></lee-step>
       </el-col>
       <el-col :span="8">
-        <ve-pie :data="chartData" :settings="pieSettings"></ve-pie>
+        <div class="lee-panel">
+          <div class="heading">
+            Cost
+          </div>
+          <div class="content">
+            <ve-pie :data="chartData" :settings="pieSettings" height="360px"></ve-pie>
+          </div>
+        </div>
+        <lee-weather :weatherData="weatherData"></lee-weather>
       </el-col>
     </el-row>
   </div>
@@ -116,6 +124,26 @@
             value: 45
           }
         ],
+        chartData: {
+          columns: ['type', 'cost', 'percent'],
+          rows: [
+            { 'type': 'Food', 'cost': 130, 'percent': 0.12 },
+            { 'type': 'Shopping', 'cost': 122, 'percent': 0.345 },
+            { 'type': 'Daily', 'cost': 212, 'percent': 0.7 },
+            { 'type': 'Entertainment', 'cost': 412, 'percent': 0.31 },
+            { 'type': 'Phone', 'cost': 312, 'percent': 0.6 },
+            { 'type': 'Clothes', 'cost': 712, 'percent': 0.65 },
+            { 'type': 'Others', 'cost': 512, 'percent': 0.6 }
+          ]
+        },
+        pieSettings: {
+          dimension: 'type',
+          metrics: 'cost',
+          selectedMode: 'single',
+          hoverAnimation: true,
+          radius: 100,
+          offsetY: 200
+        },
         stepData: [
           {
             title: 'What to do in the morning?',

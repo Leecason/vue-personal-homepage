@@ -7,7 +7,12 @@
     justify-content: space-between;
     width: 100%;
     padding: 1.4rem;
-    background: $white-color;
+    font-size: 2rem;
+    background-color: $white-color;
+    border-radius: 4px 4px 0 0;
     border-bottom: 2px solid $gray-bg-color;
+  }
+  .content {
+    padding: 1.4rem;
   }
 }

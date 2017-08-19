@@ -8,7 +8,7 @@
       <img :src="user.photo" width="100" height="100" />
     </div>
     <div class="list">
-      <div class="list-item" v-for="info in profile">
+      <div class="list-item" v-for="info in profile" :key="info.id">
         <i :class="info.icon" style="width: 10%"></i>
         <span style="width: 40%">{{ info.key }}</span>
         <span style="width: 50%">{{ info.value }}</span>

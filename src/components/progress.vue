@@ -4,12 +4,12 @@
       {{ title }}
     </div>
     <div class="list progress-content">
-      <div class="list-item" v-for="item in progressData">
+      <div class="list-item" v-for="item in progressData" :key="item.id">
         <div class="progress">
           <el-progress :text-inside="true" :stroke-width="13" :percentage="item.value" :status="judgeStatus(item.value)"></el-progress>
         </div>
         <div class="tags">
-          <el-tag class="tag" type="primary" v-for="tag in item.tags" :key="tag">{{tag}}</el-tag>
+          <el-tag class="tag" type="primary" v-for="tag in item.tags" :key="tag.id">{{tag}}</el-tag>
         </div>
         <div class="name">
           <span>{{ item.name }}</span>

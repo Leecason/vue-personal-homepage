@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <el-row :gutter="10">
-      <el-col :span="6" v-for="card in cardsData" :key="card.name">
+      <el-col :span="6" v-for="card in cardsData" :key="card.id">
         <div class="grid-content bg-purple">
           <lee-status-card :icon="card.icon" :count="card.count" :type="card.type" :name="card.name"></lee-status-card>
         </div>

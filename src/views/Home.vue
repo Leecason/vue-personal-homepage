@@ -5,14 +5,14 @@
       <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse" theme="dark">
         <router-link to="/">
           <el-menu-item index="1">
-            <i class="el-icon-star-on"></i>
+            <i class="fa fa-home"></i>
             <span slot="title">Home</span>
           </el-menu-item>
         </router-link>
-        <router-link to="/personal">
+        <router-link to="/photo">
           <el-menu-item index="2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">Personal</span>
+              <i class="fa fa-photo"></i>
+              <span slot="title">Pictures</span>
           </el-menu-item>
         </router-link>
         <router-link to="/chart">

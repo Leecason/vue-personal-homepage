@@ -61,7 +61,7 @@
             icon: 'user',
             count: '996',
             type: 'primary',
-            name: 'New Users'
+            name: 'Friends'
           },
           {
             icon: 'eye',

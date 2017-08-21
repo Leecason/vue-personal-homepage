@@ -1,16 +1,25 @@
 <template>
   <div class="lee-picture-card">
-    <el-button type="primary" size="small" class="remove-button">
-      <i class="fa fa-times"></i>
-    </el-button>
+    <div class="card-actions justify-box">
+      <el-button type="primary" size="small" class="edit-button">
+        <i class="fa fa-pencil"></i>
+      </el-button>
+      <el-button type="danger" size="small" class="remove-button">
+        <i class="fa fa-times"></i>
+      </el-button>
+    </div>
     <div class="preview">
       <img :src="url" width="100%" height="100%">
     </div>
     <div class="card-info">
-      <span class="large-text">{{ name }} <i class="fa fa-pencil edit"></i></span>
+      <span class="large-text">{{ name }}</span>
       <span class="description">{{ description }}</span>
     </div>
-    <div class="card-footer">
+    <div class="card-footer justify-between">
+      <div class="left">
+        <span><i class="fa fa-eye"></i>{{ views }}</span>
+        <span><i class="fa fa-comments"></i>{{ comments }}</span>
+      </div>
       <el-tag type="primary" size="small">more ></el-tag>
     </div>
   </div>
@@ -35,6 +44,14 @@
       description: {
         type: String,
         default: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear"
+      },
+      views: {
+        type: Number,
+        default: 0
+      },
+      comments: {
+        type: Number,
+        default: 0
       }
     },
     methods: {

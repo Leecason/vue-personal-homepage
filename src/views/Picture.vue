@@ -29,7 +29,7 @@
         </el-pagination>
       </div>
       <el-col :sm="12" :md="6" v-for="(card, index) in showCardList" :key="card.id">
-        <picture-card :name="card.name + '-' + index" :url="card.url" :description="card.description" :id="card.id"></picture-card>
+        <picture-card :name="card.name + '-' + index" :url="card.url" :description="card.description" :id="card.id" :views="card.views" :comments="card.comments"></picture-card>
       </el-col>
     </el-row>
   </div>
@@ -73,7 +73,9 @@
           name: 'lijiaxunOuO',
           id: '19940722',
           url: require('@/assets/img/picture2.jpg'),
-          description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear"
+          description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+          views: 104,
+          comments: 26
         }
       };
     },

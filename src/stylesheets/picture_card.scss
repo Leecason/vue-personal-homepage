@@ -5,18 +5,11 @@
   margin-bottom: 2rem;
 
   &:hover {
-    .remove-button {
+    .card-actions {
       opacity: 1;
     }
-    .card-info {
-      .tag-groups {
-        .button-new-tag {
-          opacity: 1;
-        }
-      }
-    }
   }
-  .remove-button {
+  .card-actions {
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -51,6 +44,22 @@
     border-top: 1px solid $divider-color;
     text-align: right;
 
+    .left {
+      color: $helper-color;
+      font-size: 1.2rem;
+
+      span {
+        margin-right: .5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      i {
+        font-size: 1.4rem;
+        margin-right: .5rem;
+      }
+    }
     .el-tag {
       cursor: pointer;
     }

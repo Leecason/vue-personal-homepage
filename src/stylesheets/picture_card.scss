@@ -18,9 +18,11 @@
     transition: opacity .3s ease-in-out;
   }
   .preview {
-    img {
-      border-radius: .4rem;
-    }
+    border-radius: .4rem;
+    max-height: 30rem;
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: 50%;
   }
   .card-info {
     padding: 1rem;

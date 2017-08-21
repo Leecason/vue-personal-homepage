@@ -29,7 +29,7 @@
         </el-pagination>
       </div>
       <el-col :sm="12" :md="6" v-for="(card, index) in showCardList" :key="card.id">
-        <picture-card :name="card.name + '-' + index" :url="card.url" :description="card.description" :id="card.id" :views="card.views" :comments="card.comments"></picture-card>
+        <picture-card :name="card.name" :url="card.url" :description="card.description" :id="card.id" :views="card.views" :comments="card.comments" @remove="removeItem(card)"></picture-card>
       </el-col>
     </el-row>
   </div>
@@ -66,23 +66,203 @@
             url: require('@/assets/img/picture5.jpg')
           }
         ],
-        card_list: [],
+        card_list: [
+          {
+            name: 'lijiaxunOuO',
+            id: 19940722,
+            url: require('@/assets/img/picture_card1.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407221,
+            url: require('@/assets/img/picture_card2.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407222,
+            url: require('@/assets/img/picture_card3.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407223,
+            url: require('@/assets/img/picture_card4.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407224,
+            url: require('@/assets/img/picture_card5.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407225,
+            url: require('@/assets/img/picture_card1.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407226,
+            url: require('@/assets/img/picture_card2.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407227,
+            url: require('@/assets/img/picture_card3.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407228,
+            url: require('@/assets/img/picture_card4.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 199407229,
+            url: require('@/assets/img/picture_card5.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072210,
+            url: require('@/assets/img/picture_card1.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072211,
+            url: require('@/assets/img/picture_card2.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072212,
+            url: require('@/assets/img/picture_card3.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072213,
+            url: require('@/assets/img/picture_card4.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072214,
+            url: require('@/assets/img/picture_card5.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072215,
+            url: require('@/assets/img/picture_card1.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072216,
+            url: require('@/assets/img/picture_card2.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072217,
+            url: require('@/assets/img/picture_card3.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072218,
+            url: require('@/assets/img/picture_card4.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072219,
+            url: require('@/assets/img/picture_card5.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072220,
+            url: require('@/assets/img/picture_card1.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072221,
+            url: require('@/assets/img/picture_card2.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072222,
+            url: require('@/assets/img/picture_card3.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+          {
+            name: 'lijiaxunOuO',
+            id: 1994072223,
+            url: require('@/assets/img/picture_card4.jpeg'),
+            description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
+            views: 104,
+            comments: 26
+          },
+        ],
         currentPage: 1,
-        perPage: 16,
-        card: {
-          name: 'lijiaxunOuO',
-          id: '19940722',
-          url: require('@/assets/img/picture2.jpg'),
-          description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear",
-          views: 104,
-          comments: 26
-        }
+        perPage: 16
       };
-    },
-    created() {
-      for(let i = 0; i < 24; i++) {
-        this.card_list.push(this.card);
-      }
     },
     computed: {
       showCardList() {
@@ -95,6 +275,14 @@
       },
       handleCurrentChange(val) {
         this.currentPage = val
+      },
+      removeItem: function(item) {
+        for(let i = 0; i < this.card_list.length; i++) {
+          if(this.card_list[i].id === item.id) {
+            this.card_list.splice(i, 1);
+            return
+          }
+        }
       }
     }
   }

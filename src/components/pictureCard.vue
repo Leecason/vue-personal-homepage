@@ -1,18 +1,16 @@
 <template>
   <div class="lee-picture-card">
     <div class="card-actions justify-box">
-      <el-button type="primary" size="small" class="edit-button">
+      <el-button type="primary" size="small">
         <i class="fa fa-pencil"></i>
       </el-button>
-      <el-button type="danger" size="small" class="remove-button">
+      <el-button type="danger" size="small" @click="removeItem">
         <i class="fa fa-times"></i>
       </el-button>
     </div>
-    <div class="preview">
-      <img :src="url" width="100%" height="100%">
-    </div>
+    <div class="preview" :style="{ backgroundImage: 'url(' + url + ')' }"></div>
     <div class="card-info">
-      <span class="large-text">{{ name }}</span>
+      <span class="large-text">{{ name }} - {{ id }}</span>
       <span class="description">{{ description }}</span>
     </div>
     <div class="card-footer justify-between">
@@ -34,8 +32,8 @@
         default: 'lijiaxunOuO'
       },
       id: {
-        type: String,
-        default: '19940722'
+        type: Number,
+        default: 19940722
       },
       url: {
         type: String,
@@ -55,6 +53,9 @@
       }
     },
     methods: {
+      removeItem: function() {
+        this.$emit('remove')
+      }
     }
   }
 </script>

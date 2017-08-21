@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/views/Home';
 import Dashboard from '@/views/Dashboard';
 import Chart from '@/views/Chart';
+import Picture from '@/views/Picture';
 
 
 Vue.use(Router);
@@ -24,9 +25,9 @@ export default new Router({
           component: Chart,
         },
         {
-          path: '/photo',
-          name: 'Photo',
-          // component: Dashboard,
+          path: '/picture',
+          name: 'Picture',
+          component: Picture,
         },
       ],
     },

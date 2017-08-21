@@ -10,7 +10,7 @@
               <span slot="title">Home</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/photo">
+          <router-link to="/picture">
             <el-menu-item index="2">
                 <i class="fa fa-photo"></i>
                 <span slot="title">Pictures</span>

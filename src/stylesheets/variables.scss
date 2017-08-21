@@ -16,6 +16,8 @@ $darken-gray-bg-color: #eee;
 $sidebar-bg-color: #324157;
 $sidebar-width: 20rem;
 
+$box-shadow: 0 2px 2px 0 transparentize($black-color, .92);
+
 .primary {
   background-color: $primary-color!important;
 }
@@ -78,6 +80,11 @@ a {
 .justify-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.justify-box {
+  display: flex;
   align-items: center;
 }
 

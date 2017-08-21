@@ -1,0 +1,81 @@
+.lee-header {
+  position: relative;
+  height: 6rem;
+  padding: 0 2rem;
+
+  .left {
+    font-size: 1.4rem;
+    color: $helper-color;
+  }
+  .command-bar {
+
+    .notification-info {
+      .el-badge {
+        font-size: 2rem;
+      }
+    }
+    .account-info {
+      margin-left: 2rem;
+
+      .account-info-btn {
+        padding: 0;
+        border: none;
+
+        > span {
+          display: flex;
+          align-items: center;
+
+          .avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-right: .5rem;
+          }
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.el-dropdown-menu {
+  font-size: 1.4rem;
+
+  .title {
+    line-height: 2rem;
+  }
+
+  .message {
+    padding: 0 1rem;
+
+    .date {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      color: $helper-color;
+    }
+  }
+}
+.el-popover {
+  font-size: 1.4rem;
+  padding: 0;
+
+  .list {
+    .list-item {
+      padding: .5rem 1rem;
+      font-size: inherit;
+      border-bottom: none;
+      color: $black-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+    .popover-divider {
+      height: 1px;
+      background-color: $helper-color;
+    }
+  }
+}

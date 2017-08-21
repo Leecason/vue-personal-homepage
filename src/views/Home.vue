@@ -33,7 +33,11 @@
 </template>
 
 <script type="javascript">
+  import Header from '@/components/header.vue';
   export default {
+    components: {
+      'lee-header': Header
+    },
     data() {
       return {
         isCollapse: false

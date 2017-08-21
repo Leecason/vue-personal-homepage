@@ -1,0 +1,58 @@
+.lee-picture-card {
+  position: relative;
+  background-color: $white-color;
+  border-radius: .4rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    .remove-button {
+      opacity: 1;
+    }
+    .card-info {
+      .tag-groups {
+        .button-new-tag {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .remove-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  .preview {
+    img {
+      border-radius: .4rem;
+    }
+  }
+  .card-info {
+    padding: 1rem;
+    text-align: left;
+
+    .edit {
+      cursor: pointer;
+    }
+
+    .description {
+      margin-top: .8rem;
+      font-size: 1.4rem;
+      word-break: break-all;
+      color: $gray-color;
+
+      @include text_overflow(3);
+    }
+  }
+  .card-footer {
+    padding: 1rem;
+    border-top: 1px solid $divider-color;
+    text-align: right;
+
+    .el-tag {
+      cursor: pointer;
+    }
+  }
+}

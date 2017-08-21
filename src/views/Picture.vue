@@ -16,12 +16,21 @@
         </el-carousel>
       </el-col>
     </el-row>
+    <el-row :gutter="10">
+      <el-col :sm="12" :md="6" v-for="card in 8" :key="card">
+        <picture-card></picture-card>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script type="javascript">
+  import PictureCard from '@/components/pictureCard.vue'
   export default{
     name: 'Picture',
+    components: {
+      'picture-card': PictureCard
+    },
     data() {
       return {
         pictures: [

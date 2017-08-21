@@ -5,6 +5,7 @@ $warning-color: #F7BA2A;
 $danger-color: #FF4949;
 $white-color: #fff;
 $black-color: #313131;
+$divider-color: #e0e0e0;
 $darken-gray-color: #616161;
 $gray-color: #757575;
 $light-gray-color: #9e9e9e;
@@ -91,4 +92,20 @@ a {
 .justify-vertical {
   display: flex;
   flex-direction: column;
+}
+
+.text-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+@mixin text_overflow($line:2){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
 }

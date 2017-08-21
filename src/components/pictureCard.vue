@@ -18,13 +18,23 @@
 
 <script type="javascript">
   export default{
-    name: 'Nandemonaiya',
-    data() {
-      return {
-        name: 'lijiaxunOuO',
-        id: '19940722',
-        url: require('@/assets/img/picture2.jpg'),
-        description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear"
+    name: 'pictureCard',
+    props: {
+      name: {
+        type: String,
+        default: 'lijiaxunOuO'
+      },
+      id: {
+        type: String,
+        default: '19940722'
+      },
+      url: {
+        type: String,
+        default: require('@/assets/img/picture2.jpg')
+      },
+      description: {
+        type: String,
+        default: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear"
       }
     },
     methods: {

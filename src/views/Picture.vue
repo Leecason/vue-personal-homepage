@@ -17,8 +17,19 @@
       </el-col>
     </el-row>
     <el-row :gutter="10">
-      <el-col :sm="12" :md="6" v-for="card in 8" :key="card">
-        <picture-card></picture-card>
+      <div class="block pagination" style="padding: 10px;text-align: right">
+        <el-pagination
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page.sync="currentPage"
+          :page-sizes="[8, 16, 24, 32]"
+          :page-size="perPage"
+          layout="total, sizes, prev, pager, next"
+          :total="card_list.length">
+        </el-pagination>
+      </div>
+      <el-col :sm="12" :md="6" v-for="(card, index) in showCardList" :key="card.id">
+        <picture-card :name="card.name + '-' + index" :url="card.url" :description="card.description" :id="card.id"></picture-card>
       </el-col>
     </el-row>
   </div>
@@ -54,7 +65,34 @@
             name: 'Immortal',
             url: require('@/assets/img/picture5.jpg')
           }
-        ]
+        ],
+        card_list: [],
+        currentPage: 1,
+        perPage: 16,
+        card: {
+          name: 'lijiaxunOuO',
+          id: '19940722',
+          url: require('@/assets/img/picture2.jpg'),
+          description: "The sorrowful gust of wind that blew right between you and me, Where did it find the loneliness it carried on the breeze, Looking up at the sky after shedding a stream of tears, I could see for miles of blue,It's never been so clear"
+        }
+      };
+    },
+    created() {
+      for(let i = 0; i < 24; i++) {
+        this.card_list.push(this.card);
+      }
+    },
+    computed: {
+      showCardList() {
+        return this.card_list.slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage);
+      }
+    },
+    methods: {
+      handleSizeChange(val) {
+        this.perPage = val
+      },
+      handleCurrentChange(val) {
+        this.currentPage = val
       }
     }
   }

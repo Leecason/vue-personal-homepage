@@ -3,20 +3,20 @@
     <lee-header></lee-header>
     <main>
       <div class="sidebar">
-        <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse" theme="dark">
+        <el-menu :default-active="activeIndex" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse" theme="dark">
           <router-link to="/">
-            <el-menu-item index="1">
+            <el-menu-item index="1" @click="changeIndex('1')">
               <i class="fa fa-home"></i>
               <span slot="title">Home</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/picture">
+          <router-link to="/picture" @click="changeIndex('2')">
             <el-menu-item index="2">
                 <i class="fa fa-photo"></i>
                 <span slot="title">Pictures</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/chart">
+          <router-link to="/chart" @click="changeIndex('3')">
             <el-menu-item index="3">
               <i class="fa fa-bar-chart"></i>
               <span slot="title">Chart</span>
@@ -40,10 +40,14 @@
     },
     data() {
       return {
+        activeIndex: '1',
         isCollapse: false
       };
     },
     methods: {
+      changeIndex(index) {
+        this.activeIndex = index;
+      },
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },

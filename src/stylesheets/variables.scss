@@ -17,7 +17,7 @@ $darken-gray-bg-color: #eee;
 $sidebar-bg-color: #324157;
 $sidebar-width: 20rem;
 
-$box-shadow: 0 2px 2px 0 transparentize($black-color, .92);
+$box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 
 .primary {
   background-color: $primary-color!important;

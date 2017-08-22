@@ -2,6 +2,8 @@
   position: relative;
   height: 6rem;
   padding: 0 2rem;
+  box-shadow: $box-shadow;
+  z-index: 20;
 
   .left {
     font-size: 1.4rem;

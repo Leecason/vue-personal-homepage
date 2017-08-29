@@ -22,6 +22,12 @@
               <span slot="title">Chart</span>
             </el-menu-item>
           </router-link>
+          <router-link to="/table" @click="changeIndex('4')">
+            <el-menu-item index="4">
+              <i class="fa fa-table"></i>
+              <span slot="title">Table</span>
+            </el-menu-item>
+          </router-link>
         </el-menu>
       </div>
       <div class="main-content">

@@ -4,6 +4,7 @@ import Home from '@/views/Home';
 import Dashboard from '@/views/Dashboard';
 import Chart from '@/views/Chart';
 import Picture from '@/views/Picture';
+import Table from '@/views/Table';
 
 
 Vue.use(Router);
@@ -28,6 +29,11 @@ export default new Router({
           path: '/picture',
           name: 'Picture',
           component: Picture,
+        },
+        {
+          path: '/table',
+          name: 'Table',
+          component: Table,
         },
       ],
     },

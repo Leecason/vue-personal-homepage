@@ -1,0 +1,18 @@
+.el-table {
+  margin-bottom: 2rem;
+
+  .table-expand {
+    font-size: 0;
+
+    label {
+      width: 9rem;;
+      color: #99a9bf;
+    }
+
+    .el-form-item {
+      margin-right: 0;
+      margin-bottom: 0;
+      width: 50%;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import Dashboard from '@/views/Dashboard';
 import Chart from '@/views/Chart';
 import Picture from '@/views/Picture';
 import Table from '@/views/Table';
+import Markdown from '@/views/Markdown';
 
 
 Vue.use(Router);
@@ -34,6 +35,11 @@ export default new Router({
           path: '/table',
           name: 'Table',
           component: Table,
+        },
+        {
+          path: '/markdown',
+          name: 'Markdown',
+          component: Markdown,
         },
       ],
     },

@@ -1,4 +1,7 @@
 .lee-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   border-radius: 4px;
   background-color: $white-color;
 
@@ -13,6 +16,7 @@
     border-bottom: 2px solid $gray-bg-color;
   }
   .content {
+    flex-grow: 1;
     padding: 1.4rem;
   }
 }

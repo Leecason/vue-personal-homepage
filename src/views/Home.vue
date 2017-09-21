@@ -10,22 +10,28 @@
               <span slot="title">Home</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/picture" @click="changeIndex('2')">
-            <el-menu-item index="2">
+          <router-link to="/picture">
+            <el-menu-item index="2" @click="changeIndex('2')">
                 <i class="fa fa-photo"></i>
                 <span slot="title">Pictures</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/chart" @click="changeIndex('3')">
-            <el-menu-item index="3">
+          <router-link to="/chart">
+            <el-menu-item index="3" @click="changeIndex('3')">
               <i class="fa fa-bar-chart"></i>
               <span slot="title">Chart</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/table" @click="changeIndex('4')">
-            <el-menu-item index="4">
+          <router-link to="/table">
+            <el-menu-item index="4" @click="changeIndex('4')">
               <i class="fa fa-table"></i>
               <span slot="title">Table</span>
+            </el-menu-item>
+          </router-link>
+          <router-link to="/markdown">
+            <el-menu-item index="5" @click="changeIndex('5')">
+              <i class="fa fa-maxcdn"></i>
+              <span slot="title">Markdown</span>
             </el-menu-item>
           </router-link>
         </el-menu>
@@ -51,9 +57,6 @@
       };
     },
     methods: {
-      changeIndex(index) {
-        this.activeIndex = index;
-      },
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },

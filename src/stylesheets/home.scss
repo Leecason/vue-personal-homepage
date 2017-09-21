@@ -43,10 +43,17 @@
     }
     .main-content {
       flex: 1;
+      display: flex;
+      flex-direction: column;
       padding: 1rem;
       background-color: $gray-bg-color;
       overflow: auto;
 
+      > * {
+        &:first-child {
+          flex-grow: 1;
+        }
+      }
       .content-footer {
         padding: 1.5rem;
         font-size: 1.4rem;
@@ -99,11 +106,24 @@
 }
 
 .table {
+  display: flex;
   text-align: left;
   padding: 2rem;
   background-color: $white-color;
 
   .toolbar {
     height: 5rem;
+  }
+}
+.markdown {
+  display: flex;
+  text-align: left;
+  padding: 2rem;
+  background-color: $white-color;
+
+  .lee-panel {
+    >.content {
+      display: flex;
+    }
   }
 }

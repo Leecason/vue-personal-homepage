@@ -56,7 +56,13 @@
         isCollapse: false
       };
     },
+    created() {
+      this.activeIndex = localStorage.getItem('lee_menu_active_index') || '1'
+    },
     methods: {
+      changeIndex(index) {
+        localStorage.setItem('lee_menu_active_index', index)
+      },
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },

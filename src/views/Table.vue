@@ -13,7 +13,7 @@
             :width="80">
           </el-switch>
         </div>
-        <lee-table :type="table_type" :tableData="showTableData" ref="lee-table"></lee-table>
+        <lee-table :type="table_type" :tableData="showTableData" ref="lee-table" @deleteData="deleteDataFunc"></lee-table>
         <el-pagination
           @current-change="handleCurrentChange"
           :current-page="currentPage"
@@ -40,65 +40,74 @@
           {
             id: '1',
             name: 'Monkey.D.Luffy',
-            category: 'rubber, eat',
+            feature: 'rubber, eat',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 500000000
           },
           {
             id: '2',
             name: 'Roronoa Zoro',
-            category: 'Three pole flow， drink',
+            feature: 'Three pole flow， drink',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 320000000
           },
           {
             id: '3',
             name: 'Nami',
-            category: 'beautiful thief',
+            feature: 'beautiful thief',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 200000000
           },
           {
             id: '4',
             name: 'Usopp',
-            category: 'lie',
+            feature: 'lie',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 320000000
           },
           {
             id: '5',
             name: 'Sanji',
-            category: 'cook',
+            feature: 'cook',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 177000000
           },
           {
             id: '6',
             name: 'Tony Tony Chopper',
-            category: 'doctor',
+            feature: 'doctor',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 100
           },
           {
             id: '7',
             name: 'Nico Robin',
-            category: 'beautiful, knowledge',
+            feature: 'beautiful, knowledge',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 130000000
           },
           {
             id: '8',
             name: 'Franky',
-            category: 'robot, build',
+            feature: 'robot, build',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 94000000
           },
           {
             id: '9',
             name: 'Brook',
-            category: 'music, skeleton',
+            feature: 'music, skeleton',
             desc: 'xxxxxx',
-            team: 'The straw hat Pirates'
+            team: 'The straw hat Pirates',
+            bounty: 83000000
           }
         ],
         currentPage: 1,
@@ -117,6 +126,11 @@
       handleCurrentChange(val) {
         this.currentPage = val;
         this.$refs['lee-table'].filterTag();
+      },
+      deleteDataFunc(data) {
+        this.tableData = this.tableData.filter(function(value){
+          return value.id !== data.id
+        });
       }
     }
   }

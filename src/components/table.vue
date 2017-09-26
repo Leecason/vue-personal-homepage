@@ -17,11 +17,14 @@
           <el-form-item label="ID">
             <span>{{ props.row.id }}</span>
           </el-form-item>
-          <el-form-item label="category">
-            <span>{{ props.row.category }}</span>
+          <el-form-item label="feature">
+            <span>{{ props.row.feature }}</span>
           </el-form-item>
           <el-form-item label="description">
             <span>{{ props.row.desc }}</span>
+          </el-form-item>
+          <el-form-item label="bounty">
+            <span>{{ props.row.bounty }}</span>
           </el-form-item>
         </el-form>
       </template>
@@ -38,7 +41,28 @@
     </el-table-column>
     <el-table-column
       label="description"
+      sortable
       prop="desc">
+    </el-table-column>
+    <el-table-column
+      label="feature"
+      prop="feature">
+    </el-table-column>
+    <el-table-column
+      label="bounty"
+      sortable
+      prop="bounty">
+    </el-table-column>
+    <el-table-column label="action">
+      <template scope="scope">
+        <el-button
+          size="small"
+          @click="handleEdit(scope.$index, scope.row)">edit</el-button>
+        <el-button
+          size="small"
+          type="danger"
+          @click="handleDelete(scope.$index, scope.row)">delete</el-button>
+      </template>
     </el-table-column>
   </el-table>
 </template>
@@ -80,8 +104,26 @@
       }
     },
     methods: {
-      filterTag(value, row) {
-        return row.tag === value;
+      handleEdit(index, row) {
+        console.log(index, row);
+      },
+      handleDelete(index, row) {
+        this.$confirm('You will delete that data?', 'Delete', {
+          confirmButtonText: 'Ensure',
+          cancelButtonText: 'Cancel',
+          type: 'error'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: 'delete success!'
+          });
+          this.$emit('deleteData', row);
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: 'cancel delete'
+          });
+        });
       }
     }
   }

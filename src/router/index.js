@@ -6,6 +6,7 @@ import Chart from '@/views/Chart';
 import Picture from '@/views/Picture';
 import Table from '@/views/Table';
 import Markdown from '@/views/Markdown';
+import Cropper from '@/views/Cropper';
 
 
 Vue.use(Router);
@@ -40,6 +41,11 @@ export default new Router({
           path: '/markdown',
           name: 'Markdown',
           component: Markdown,
+        },
+        {
+          path: '/cropper',
+          name: 'Cropper',
+          component: Cropper,
         },
       ],
     },

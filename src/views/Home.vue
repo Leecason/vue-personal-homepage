@@ -34,6 +34,12 @@
               <span slot="title">Markdown</span>
             </el-menu-item>
           </router-link>
+          <router-link to="/cropper">
+            <el-menu-item index="6" @click="changeIndex('6')">
+              <i class="fa fa-crop"></i>
+              <span slot="title">Cropper</span>
+            </el-menu-item>
+          </router-link>
         </el-menu>
       </div>
       <div class="main-content">

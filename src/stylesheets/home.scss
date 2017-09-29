@@ -127,3 +127,17 @@
     }
   }
 }
+.cropper {
+  text-align: left;
+
+  .lee-panel {
+    >.content {
+      .cropper-toggle {
+        margin-bottom: 2rem;
+      }
+      .cropper-result {
+        border-top: 1px dashed $gray-color;
+      }
+    }
+  }
+}

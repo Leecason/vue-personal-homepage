@@ -3,7 +3,7 @@
     :data="tableData"
     :border="type.border"
     :stripe="type.stripe"
-    :default-sort = "{prop: 'id', order: 'descending'}"
+    :default-sort = "{prop: 'id', order: 'ascending'}"
     style="width: 100%">
     <el-table-column type="expand">
       <template scope="props">
@@ -32,31 +32,47 @@
     <el-table-column
       label="ID"
       sortable
-      prop="id">
+      prop="id"
+      :width="100">
     </el-table-column>
     <el-table-column
-      label="name"
+      label="Name"
       sortable
-      prop="name">
+      prop="name"
+      :width="120">
+    </el-table-column>
+    <el-table-column label="Fight rate" :width="150">
+      <template scope="scope">
+        <el-rate v-model="scope.row.rate" disabled></el-rate>
+      </template>
     </el-table-column>
     <el-table-column
-      label="description"
+      label="Description"
       sortable
       prop="desc">
     </el-table-column>
     <el-table-column
-      label="feature"
-      prop="feature">
+      label="Feature"
+      prop="feature"
+      :width="150">
     </el-table-column>
     <el-table-column
-      label="bounty"
+      label="Bounty"
       sortable
-      prop="bounty">
+      prop="bounty"
+      :width="120">
     </el-table-column>
-    <el-table-column label="action">
+    <el-table-column
+      label="Team"
+      prop="team"
+      :width="250">
+    </el-table-column>
+    <el-table-column label="Action" :width="150">
       <template scope="scope">
         <el-button
           size="small"
+          :plain='true'
+          type='info'
           @click="handleEdit(scope.$index, scope.row)">edit</el-button>
         <el-button
           size="small"
@@ -106,6 +122,7 @@
     methods: {
       handleEdit(index, row) {
         console.log(index, row);
+        this.$emit('editData', row);
       },
       handleDelete(index, row) {
         this.$confirm('You will delete that data?', 'Delete', {

@@ -12,10 +12,16 @@
             off-color="#13CE66"
             :width="80">
           </el-switch>
-          <el-button type="primary" @click='addDataFunc'>
-            <span>Add</span>
-            <i class="fa fa-plus"></i>
-          </el-button>
+          <div class="right">
+            <el-button type="primary" @click='addDataFunc'>
+              <span>Add</span>
+              <i class="fa fa-plus"></i>
+            </el-button>
+            <el-button type="primary" @click='exportTable'>
+              <span>Export</span>
+              <i class="fa fa-file-excel-o"></i>
+            </el-button>
+          </div>
         </div>
         <lee-table :type="table_type" :tableData="showTableData" ref="lee-table" @deleteData="deleteDataFunc" @editData="editDataFunc"></lee-table>
         <el-pagination
@@ -222,6 +228,12 @@
         var new_id = parseInt(this.tableData[this.tableData.length - 1].id) + 1;
         this.form.id = new_id;
         this.tableData.push(this.form);
+      },
+      exportTable() {
+        this.$notify({
+          title: 'Export Done',
+          type: 'success'
+        });
       },
       _resetForm() {
         this.form = {

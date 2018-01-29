@@ -132,11 +132,38 @@
 
   .lee-panel {
     >.content {
-      .cropper-toggle {
+      .cropper-wrapper {
         margin-bottom: 2rem;
       }
+
+      .vue-cropper {
+        height: 500px;
+
+      }
+
+      .cropper-buttons {
+        margin-top: 1rem;
+
+        .upload-btn {
+          display: inline-block;
+        }
+      }
+
+      .cropper-switches {
+        margin-top: .5rem;
+
+        .switch-item {
+          font-size: 1.4rem;
+          margin: .25rem 0;
+
+          .el-switch {
+            margin-left: .5rem;
+          }
+        }
+      }
+
       .cropper-result {
-        border-top: 1px dashed $gray-color;
+        border: 1px solid $gray-color;
       }
     }
   }

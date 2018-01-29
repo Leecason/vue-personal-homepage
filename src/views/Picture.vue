@@ -36,7 +36,7 @@
 </template>
 
 <script type="javascript">
-  import PictureCard from '@/components/pictureCard.vue'
+  import PictureCard from '@/components/picture_card.vue'
   export default{
     name: 'Picture',
     components: {

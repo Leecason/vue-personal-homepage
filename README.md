@@ -72,6 +72,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 .
 ```
 
-##License
+## License
 
 [MIT](https://github.com/Leecason/vue-personal-homepage/blob/master/LICENSE)

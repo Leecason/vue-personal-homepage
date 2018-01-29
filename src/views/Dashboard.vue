@@ -107,23 +107,23 @@
           },
           {
             name: 'Css',
-            tags: ['Sass', 'Less'],
+            tags: ['Sass', 'Less', 'Plain CSS', 'Bootstrap'],
             value: 60
           },
           {
-            name: 'Html',
-            tags: [],
-            value: 30
-          },
-          {
-            name: 'Office',
-            tags: ['Excel', 'PPT', 'Word'],
+            name: 'Build Tools',
+            tags: ['NPM', 'Webpack', 'Gulp', 'Browserify', 'Grunt'],
             value: 100
           },
           {
-            name: 'Other',
-            tags: ['PhotoShop'],
+            name: 'Package Managers',
+            tags: ['yarn', 'npm', 'Bower'],
             value: 45
+          },
+          {
+            name: 'Text Editors',
+            tags: ['VS Code', 'Atom', 'Sublime Text', 'WebStorm', 'Vim'],
+            value: 85
           }
         ],
         chartData: {

@@ -1,0 +1,65 @@
+.login-container {
+  height: 100%;
+  background-color: $deep-primary-color;
+  overflow: hidden;
+
+  .el-form {
+    color: $white-color;
+    width: 50rem;
+    margin: 20rem auto 0;
+    text-align: center;
+
+    .title {
+      font-size: 3.6rem;
+      margin-bottom: 4rem;
+      font-weight: bold;
+    }
+
+    .el-form-item {
+      position: relative;
+
+      .form-item-icon {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-size: 1.8rem;
+        color: $deep-primary-color;
+        z-index: 1;
+      }
+
+      .el-form-item__label {
+        color: $white-color;
+      }
+
+      .el-form-item__content {
+        margin-left: 0!important;
+
+        .el-input__inner {
+          text-indent: 30px;
+        }
+      }
+
+      .show-password {
+        top: 0;
+        left: auto;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .el-button {
+      width: 100%;
+    }
+
+    .tip {
+      text-align: right;
+
+      .tip-content {
+        display: inline-block;
+        text-align: left;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

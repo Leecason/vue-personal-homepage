@@ -35,7 +35,7 @@
             <div class="list-item">Friends list</div>
             <div class="popover-divider"></div>
             <div class="list-item">Settings</div>
-            <div class="list-item">Sign out</div>
+            <div class="list-item" @click='logout'>Log out</div>
           </div>
         </el-popover>
         <el-button v-popover:popover class="account-info-btn">
@@ -54,6 +54,13 @@
       return {
         logo: require('@/assets/img/logo.png'),
         photo: require('@/assets/img/user_photo.jpeg')
+      }
+    },
+    methods: {
+      logout() {
+        // request success
+        this.delCookie('session');
+        this.$router.push('/login');
       }
     }
   }

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Login from '@/views/Login';
 import Home from '@/views/Home';
 import Dashboard from '@/views/Dashboard';
 import Chart from '@/views/Chart';
@@ -48,6 +49,10 @@ export default new Router({
           component: Cropper,
         },
       ],
+    },
+    {
+      path: '/login',
+      component: Login,
     },
   ],
 });

@@ -57,12 +57,10 @@
           text: 'loading...'
         })
 
-        setTimeout(() => {
-          setTimeout(() => {
-            var expire_days = 1000 * 60 * 60 * 24 * 15;
-            this.setCookie('session', 'lijiaxunOuO', expire_days);
-          }, 3000)
+        var expire_days = 1000 * 60 * 60 * 24 * 15;
+        this.setCookie('session', 'lijiaxunOuO', expire_days);
 
+        setTimeout(() => {
           this.$nextTick(() => {
             loadingInstance.close();
             this.$router.push('/');

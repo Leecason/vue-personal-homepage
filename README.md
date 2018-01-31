@@ -38,7 +38,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## Layout (updating)
 
-``` bash
+```
 .
 ├── build                                       // webpack config file
 ├── config                                      // package path

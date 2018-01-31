@@ -7,7 +7,7 @@
 
 ## Technology Stack
 
-vue2 + vue-router + webpack + ES6 + sass + flex
+vue2 + vuex + vue-router + webpack + ES6 + sass + flex
 
 ## Build Setup
 
@@ -57,12 +57,15 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 │   │   ├── weather.vue
 │   ├── router                                  // router
 │   │   ├── index.js
+│   ├── store                                   // store
+│   │   ├── index.js
 │   ├── stylesheets                             // pages and components stylesheets
 │   ├── views                                   // page views
 │   │   ├── Chart.vue
 │   │   ├── Cropper.vue
 │   │   ├── Dashboard.vue
 │   │   ├── Home.vue
+│   │   ├── Login.vue
 │   │   ├── Markdown.vue
 │   │   ├── Picture.vue
 │   │   ├── Table.vue
@@ -75,3 +78,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ## License
 
 [MIT](https://github.com/Leecason/vue-personal-homepage/blob/master/LICENSE)
+
+## Reference
+  - [使用 webpack 来构建 vue 项目](http://hanekaoru.com/%E4%BD%BF%E7%94%A8-webpack-%E6%9D%A5%E6%9E%84%E5%BB%BA-vue-%E9%A1%B9%E7%9B%AE/)
+  - [基于vue-cli快速构建](https://www.jianshu.com/p/2769efeaa10a)
+  - [Vue.js写一个SPA登录页面的过程](https://www.jianshu.com/p/eff145fb815b)
